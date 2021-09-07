@@ -34,4 +34,5 @@ export const CarouselTitle = styled.h1`
     font-weight: bold;
     line-height: 29px;
     margin: 16px 0;
-`
+`;
+
