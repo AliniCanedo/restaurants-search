@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, Search, Logo, Wrapper, Map, CarouselTitle } from './styles';
+import { Container, Search, Logo, Wrapper, Map, CarouselTitle, Carousel } from './styles';
 import logo from '../../assets/logo.svg';
 import TextField, { Input } from '@material/react-text-field';
 import MaterialIcon from '@material/react-material-icon';
@@ -35,7 +35,7 @@ const Home = () => {
                         />
                     </TextField>
                     <CarouselTitle>Na sua Área</CarouselTitle>
-                    <Slider {...settings}>
+                    <Carousel {...settings}>
                         <Card photo={restaurante}></Card>
                         <Card photo={restaurante}></Card>
                         <Card photo={restaurante}></Card>
@@ -43,7 +43,7 @@ const Home = () => {
                         <Card photo={restaurante}></Card>
                         <Card photo={restaurante}></Card>
                         <Card photo={restaurante}></Card>
-                    </Slider>
+                    </Carousel>
                 </Search>
             </Container>
             <Map />
