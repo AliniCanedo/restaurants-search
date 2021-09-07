@@ -25,4 +25,13 @@ export const Logo = styled.img`
 export const Map = styled.div`
     background-color: purple;
     width: 50%
+`;
+
+export const CarouselTitle = styled.h1`
+    font-family: ${(props) => props.theme.fonts.regular};
+    color: ${(props) => props.theme.colors.text};
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 29px;
+    margin: 16px 0;
 `

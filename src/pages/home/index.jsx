@@ -1,11 +1,23 @@
 import React, { useState } from 'react';
-import { Container, Search, Logo, Wrapper, Map } from './styles';
+import { Container, Search, Logo, Wrapper, Map, CarouselTitle } from './styles';
 import logo from '../../assets/logo.svg';
 import TextField, { Input } from '@material/react-text-field';
 import MaterialIcon from '@material/react-material-icon';
+import restaurante from '../../assets/restaurante-fake.png';
+import Slider from "react-slick";
 
 const Home = () => {
     const [inputValue, setInputValue] = useState('');
+
+    const settings = {
+        dots: false,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        adaptiveHeight: true,
+    };
+
     return (
         <Wrapper >
             <Container>
@@ -14,13 +26,26 @@ const Home = () => {
                     <TextField
                         label='Pesquisar Restaurantes'
                         outlined
-
-                        // onTrailingIconSelect={() => this.setState({ value: '' })}
                         trailingIcon={<MaterialIcon role="button" icon="search" />}
-                    ><Input
+                    >
+                        <Input
                             value={inputValue}
-                            onChange={(e) => setInputValue(e.target.value)} />
+                            onChange={(e) => setInputValue(e.target.value)}
+                        />
                     </TextField>
+                    <CarouselTitle>Na sua Área</CarouselTitle>
+                    <Slider {...settings}>
+                        <div><img src={restaurante} alt="" /></div>
+                        <div><img src={restaurante} alt="" /></div>
+                        <div><img src={restaurante} alt="" /></div>
+                        <div><img src={restaurante} alt="" /></div>
+                        <div><img src={restaurante} alt="" /></div>
+                        <div><img src={restaurante} alt="" /></div>
+                        <div><img src={restaurante} alt="" /></div>
+                        <div><img src={restaurante} alt="" /></div>
+                        <div><img src={restaurante} alt="" /></div>
+                        <div><img src={restaurante} alt="" /></div>
+                    </Slider>
                 </Search>
             </Container>
             <Map />
